@@ -1,12 +1,13 @@
 import React from "react";
 import Modal from "../UI/Modal";
-import style from "./Cart.module.jsx";
+import style from "./Cart.module.css";
 
 const Cart = (props) => {
+  const randomKey = Math.random();
   const cartItems = (
     <ul className={style["cart-items"]}>
       {[{ id: "c1", name: "sushi", price: 73.44, amount: 2 }].map((item) => (
-        <li>{item.name}</li>
+        <li key={randomKey}>{item.name}</li>
       ))}
     </ul>
   );
