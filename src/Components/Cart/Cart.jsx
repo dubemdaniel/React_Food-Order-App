@@ -4,9 +4,12 @@ import style from "./Cart.module.css";
 
 const Cart = (props) => {
   const randomKey = Math.random();
+  const cartItemWrapper = [
+    { id: "c1", name: "sushi", price: 73.44, amount: 2 },
+  ];
   const cartItems = (
     <ul className={style["cart-items"]}>
-      {[{ id: "c1", name: "sushi", price: 73.44, amount: 2 }].map((item) => (
+      {cartItemWrapper.map((item) => (
         <li key={randomKey}>{item.name}</li>
       ))}
     </ul>
@@ -19,7 +22,7 @@ const Cart = (props) => {
         <span> Total Amount</span>
         <span>64.74</span>
       </div>
-      <div className={style.action}>
+      <div className={style.actions}>
         <button className={style["button--alt"]}>Close</button>
         <button className={style.button}>Order</button>
       </div>

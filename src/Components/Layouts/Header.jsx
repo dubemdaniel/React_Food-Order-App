@@ -3,12 +3,12 @@ import HeaderCartButton from "./HeaderCartButton";
 import mealsImage from "../../assets/meals.jpg";
 import style from "./Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <>
       <header className={style.header}>
         <h1>Dubem-Meals</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={props.onShowCart} />
       </header>
       <div className={style["main-image"]}>
         <img src={mealsImage} alt="Delicious meal on a Table" />
