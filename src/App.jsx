@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <>
-      {showCart && <Cart />}
+      {showCart && <Cart onRemoveCart={removeCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
