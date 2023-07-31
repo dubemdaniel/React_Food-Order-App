@@ -14,7 +14,6 @@ const App = () => {
   const removeCartHandler = () => {
     setShowCart(false);
   };
-
   return (
     <>
       {showCart && <Cart onRemoveCart={removeCartHandler} />}
