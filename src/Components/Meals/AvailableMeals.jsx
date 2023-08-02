@@ -29,7 +29,7 @@ const DUMMY_MEALS = [
     price: 18.99,
   },
 ];
-//
+
 const AvailableMeals = () => {
   const mealList = DUMMY_MEALS.map((meal) => (
     <MealItem
